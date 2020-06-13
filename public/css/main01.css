@@ -1,0 +1,64 @@
+body{
+	background-color: #dee6e8;
+	font-size: 1rem;
+}
+.neu-flat-box{
+	border-radius: 35px;
+	background: #dee6e8;
+	box-shadow:  5px 5px 10px #bdc4c5, 
+             -5px -5px 10px #ffffff;
+}
+.neu-concave-box{
+	border-radius: 35px;
+	background: linear-gradient(145deg, #c8cfd1, #eef6f8);
+	box-shadow:  5px 5px 10px #bdc4c5, 
+             -5px -5px 10px #ffffff;
+}
+.neu-convex-box{
+	border-radius: 35px;
+	background: linear-gradient(145deg, #eef6f8, #c8cfd1);
+	box-shadow:  5px 5px 10px #bdc4c5, 
+             -5px -5px 10px #ffffff;	
+}
+.neu-pressed-box{
+	border-radius: 35px;
+	background: #dee6e8;
+	box-shadow: inset 5px 5px 10px #bdc4c5, 
+            inset -5px -5px 10px #ffffff;
+}
+.neu-flat-circle{
+	border-radius: 50%;
+	background: #dee6e8;
+	box-shadow:  5px 5px 10px #bdc4c5, 
+             -5px -5px 10px #ffffff;
+}
+.neu-concave-circle{
+	border-radius: 50%;
+	background: linear-gradient(145deg, #c8cfd1, #eef6f8);
+	box-shadow:  5px 5px 10px #bdc4c5, 
+             -5px -5px 10px #ffffff;
+}
+.neu-convex-cirle{
+	border-radius: 50%;
+	background: linear-gradient(145deg, #eef6f8, #c8cfd1);
+	box-shadow:  5px 5px 10px #bdc4c5, 
+             -5px -5px 10px #ffffff;
+}
+.neu-pressed-circle{
+	border-radius: 50%;
+	background: #dee6e8;
+	box-shadow: inset 5px 5px 10px #bdc4c5, 
+            inset -5px -5px 10px #ffffff;
+}
+.nav-categorys{
+	text-align: center;
+	height: 4rem;
+	line-height: 4rem;
+}
+
+@media only screen and (max-width: 500px) {
+  	/* rules that only apply for canvases narrower than 1000px */
+	body{
+		font-size: .75rem;
+	}
+}

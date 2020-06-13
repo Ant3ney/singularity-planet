@@ -1,0 +1,29 @@
+<%- include("../partials/blogHeader") -%>
+
+<form id="new-input" action="/blog" method="POST">
+	<div class="row d-flex">
+		<label class="mt-4 ml-4 p-3 neu-flat-sbox">Title</label>
+		<input class="input-ele p-3 mx-4 mt-4 neu-pressed-sbox" type="text" name="title">
+	</div>
+	<div class="row d-flex">
+		<label class="mt-4 ml-4 p-3 neu-flat-sbox">Image</label>
+		<input class="input-ele p-3 mx-4 mt-4 neu-pressed-sbox" type="text" name="image">
+	</div>
+	<div class="row d-flex">
+		<label id="lineheight-fix" class="mt-4 ml-4 p-3 neu-flat-sbox">Preview</label>
+		<div class="input-ele p-3 mx-4 mt-4 neu-pressed-sbox">
+			<textarea class="textarea-ele" rows="2" name="preview"></textarea>
+		</div>
+	</div>
+	<div class="row d-flex">
+		<label id="lineheight-fix02" class="mt-4 ml-4 p-3 neu-flat-sbox">Content</label>
+		<div class="input-ele p-3 mx-4 mt-4 neu-pressed-sbox">
+			<textarea class="textarea-ele" rows="20" name="content"></textarea>
+		</div>
+	</div>
+	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele">
+		Create blog
+	</button>
+</form>
+
+<%- include("../partials/blogFooter") -%>
