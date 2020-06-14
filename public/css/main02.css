@@ -220,3 +220,32 @@ body{
 	resize: none;
 	outline:none !important;
 }
+.normalize-input-ele{
+	background-color: transparent !important;
+	border: 0px;
+	outline:none !important;
+	width: 100%;
+	height: 100%;
+}
+input:-webkit-autofill {
+    background-color: transparent !important;
+	color: red;
+}
+input:-webkit-autofill:focus {
+    background-color: transparent !important;
+}
+input:-webkit-autofill:hover{
+	background-color: transparent !important;
+	color: red;
+}
+.normalize-input-ele:-webkit-autofill {
+    background-color: transparent !important;
+	color: red;
+}
+.normalize-input-ele:-webkit-autofill:focus {
+    background-color: transparent !important;
+}
+.normalize-input-ele:-webkit-autofill:hover{
+	background-color: transparent !important;
+	color: red;
+}

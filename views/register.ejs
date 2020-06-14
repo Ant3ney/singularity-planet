@@ -1,17 +1,16 @@
 <%- include("partials/blogHeader") -%>
 
-<form id="new-input" action="/register" method="POST">
+<form id="new-input" action="/register" method="POST" autocomplete="off">
 	<div class="row d-flex">
 		<label class="mt-4 ml-4 p-3 neu-flat-sbox">Username</label>
-		<input class="input-ele p-3 mx-4 mt-4 neu-pressed-sbox" type="text" name="username" placeholder="username">
+		<span class="neu-pressed-sbox mx-4 mt-4 input-ele"><input class="p-3 normalize-input-ele" type="text" name="username" placeholder="username"></span>
 	</div>
 	<div class="row d-flex">
 		<label class="mt-4 ml-4 p-3 neu-flat-sbox">Password</label>
-		<input class="input-ele p-3 mx-4 mt-4 neu-pressed-sbox" type="password" name="password" placeholder="password">
+		<span class="neu-pressed-sbox mx-4 mt-4 input-ele"><input class="p-3 normalize-input-ele" type="password" name="password" placeholder="password"></span>
 	</div>
 	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele">
 		Sign up
 	</button>
 </form>
-
 <%- include("partials/blogFooter") -%>
