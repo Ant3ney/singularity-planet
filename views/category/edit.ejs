@@ -1,0 +1,72 @@
+<%- include("../partials/blogHeader") -%>
+<h3>
+	Edit category page
+</h3>
+<h3>
+	Edit current blogs
+</h3>
+
+	<!-- Display All the blogs currently in category -->
+<div class="row">
+	<% for(var i = (category.blogs.length - 1); i >= 0; i--) {%>
+		<div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
+			<div class="neu-flat-sbox blog-display-container">
+				<div class="neu-flat-sbox blog-display-img-holder">
+					<img src="<%= category.blogs[i].image %>" class="blog-display-img">
+				</div>
+				<div class="neu-flat-sbox blog-display-title-container">
+					<p class="p-1 mb-0 blog-display-title-text-container">
+						<%= category.blogs[i].title %>
+					</p>
+				</div>
+				<div class="neu-pressed-sbox blog-display-preview-container">
+					<p class="p-1 blog-display-preview-text-container">
+						<%= category.blogs[i].preview %>
+					</p>
+				</div>
+				<div class="blog-display-buttons-abstract-container">
+					<form class="w-100-button-simple" action="/blog/category/<%= index %>/manageCategory/<%= category.blogs[i]._id %>?_method=DELETE" method="POST">
+						<button class="normalize-link neu-convex-sbox normalize-link w-100-button-simple pressable-button-action">
+							Remove
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	<% } %>
+</div>
+
+<!-- Show blogs to add -->
+<h3>
+	Add new blogs
+</h3>
+<div class="row">
+	<% for(var i = (blogs.length - 1); i >= 0; i--) {%>
+		<div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
+			<div class="neu-flat-sbox blog-display-container">
+				<div class="neu-flat-sbox blog-display-img-holder">
+					<img src="<%= blogs[i].image %>" class="blog-display-img">
+				</div>
+				<div class="neu-flat-sbox blog-display-title-container">
+					<p class="p-1 mb-0 blog-display-title-text-container">
+						<%= blogs[i].title %>
+					</p>
+				</div>
+				<div class="neu-pressed-sbox blog-display-preview-container">
+					<p class="p-1 blog-display-preview-text-container">
+						<%= blogs[i].preview %>
+					</p>
+				</div>
+				<div class="blog-display-buttons-abstract-container">
+					<form class="w-100-button-simple" action="/blog/category/<%= index %>/manageCategory/<%= blogs[i]._id %>" method="POST">
+						<button class="normalize-link neu-convex-sbox normalize-link w-100-button-simple pressable-button-action">
+							Add
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	<% } %>
+</div>
+
+<%- include("../partials/blogFooter") -%>

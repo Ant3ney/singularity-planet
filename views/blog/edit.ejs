@@ -21,12 +21,12 @@
 			<textarea class="textarea-ele" rows="20" name="content"><%= blog.content %></textarea>
 		</div>
 	</div>
-	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele">
+	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele pressable-button-action">
 		Update blog
 	</button>
 </form>
 <form action="/blog/<%= blog._id %>?_method=DELETE" method="POST">
-	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele">
+	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele pressable-button-action">
 		Delete
 	</button>
 </form>

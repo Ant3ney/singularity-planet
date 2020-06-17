@@ -1,5 +1,33 @@
 <%- include("../partials/blogHeader") -%>
 
+<%= blog.content %>
 
+<h4 class="neu-flat-sbox w-100-button">
+	Comments
+</h4>
+<form action="/blog/<%= blog._id %>/comment" method="post">
+	<div class="row d-flex">
+		<label class="mt-4 ml-4 p-3 neu-flat-sbox">New Comment</label>
+		<span class="neu-pressed-sbox mx-4 mt-4 input-ele"><input class="p-3 normalize-input-ele" type="text" name="comment"></span>
+	</div>
+	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele pressable-button-action">
+		Comment
+	</button>
+</form>
+
+	<% for(var i = 0; i < blog.comments.length; i++) {%>
+		<div class="out">
+			<div class="neu-pressed-sbox m-2 p-2 w-100-button-simple-03 d-flex">
+				<span class="input-ele"><strong><%= blog.comments[i].username %></strong>: <%= blog.comments[i].comment %></span>
+			</div>
+			<% if(currentUser && currentUser._id.equals(blog.comments[i].user)){ %>
+			<form class="m-2 p-2 height-100" action="/blog/<%= blog._id %>/comment/<%= blog.comments[i]._id %>?_method=delete" method="POST">
+				<button class="height-100 neu-convex-sbox form-button-ele pressable-button-action">
+					Delete
+				</button>
+			</form>
+			<% } %>
+		</div>
+	<% } %>
 
 <%- include("../partials/blogFooter") -%>

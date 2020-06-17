@@ -1,0 +1,10 @@
+<%- include("../partials/blogHeader") -%>
+<h4>
+	This is the category page for <%= category.title %>
+</h4>
+<% if(isAdmin) { %>
+	<a href="/blog/category/<%= index %>/edit" class="neu-convex-sbox normalize-link w-100-button pressable-button-action">
+		Edit
+	</a>
+<% } %>
+<%- include("../partials/blogFooter") -%>

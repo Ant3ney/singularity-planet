@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 		}
 	});
 });
-router.get("/new", (req, res) => {
+router.get("/new", middleware.isAdmin, (req, res) => {
 	res.render("blog/new");
 });
 router.post("/", (req, res) => {
@@ -69,7 +69,15 @@ router.delete("/:blogId", (req, res) => {
 	})
 });
 router.get("/:blogId", (req, res) => {
-	res.render("blog/show");
+	var blog_id = req.params.blogId;
+	Blog.findById(blog_id).populate("comments").exec((err, blog) => {
+		if(err){
+			console.log(err.message);
+		}
+		else{
+			res.render("blog/show", {blog: blog});
+		}
+	});
 });
 
 module.exports = router;
