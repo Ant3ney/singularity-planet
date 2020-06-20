@@ -1,14 +1,16 @@
 <%- include("../partials/blogHeader") -%>
 
-<%= blog.content %>
+<div id="Blog-content-div">
+	
+</div>
 
 <h4 class="neu-flat-sbox w-100-button">
 	Comments
 </h4>
 <form action="/blog/<%= blog._id %>/comment" method="post">
 	<div class="row d-flex">
-		<label class="mt-4 ml-4 p-3 neu-flat-sbox">New Comment</label>
-		<span class="neu-pressed-sbox mx-4 mt-4 input-ele"><input class="p-3 normalize-input-ele" type="text" name="comment"></span>
+		<label class="mt-4 ml-3 p-3 neu-flat-sbox">New Comment</label>
+		<span class="neu-pressed-sbox mx-sm-3 mx-2 mr-3 mt-4 input-ele"><input class="p-3 normalize-input-ele" type="text" name="comment"></span>
 	</div>
 	<button class="mt-4 mb-2 p-3 neu-convex-sbox form-button-ele pressable-button-action">
 		Comment
@@ -29,5 +31,11 @@
 			<% } %>
 		</div>
 	<% } %>
+
+<script>
+	var content = document.getElementById("Blog-content-div");
+	var bloghtml = <%- JSON.stringify( {content: blog.content} ) -%>;
+	content.innerHTML = bloghtml.content;
+</script>
 
 <%- include("../partials/blogFooter") -%>
