@@ -1,7 +1,42 @@
 <%- include("../partials/blogHeader") -%>
-<h4>
-	This is the category page for <%= category.title %>
-</h4>
+
+<!-- Blogs -->
+<div class="row">
+		<% for(var i = (category.blogs.length - 1); i >= 0; i--) {%>
+		<div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
+			<div class="neu-flat-sbox blog-display-container">
+				<div class="neu-flat-sbox blog-display-img-holder">
+					<img src="<%= category.blogs[i].image %>" class="blog-display-img">
+				</div>
+				<div class="neu-flat-sbox blog-display-title-container">
+					<p class="p-1 mb-0 blog-display-title-text-container">
+						<%= category.blogs[i].title %>
+					</p>
+				</div>
+				<div class="neu-pressed-sbox blog-display-preview-container">
+					<p class="p-1 blog-display-preview-text-container">
+						<%= category.blogs[i].preview %>
+					</p>
+				</div>
+				<div class="blog-display-buttons-abstract-container">
+					<a href="/blog/<%= category.blogs[i]._id %>" class="normalize-link neu-convex-box mr-auto blog-display-button normalize-link pressable-button-action">
+						View
+					</a>
+					<% if(isAdmin){ %>
+					<a href="/blog/<%= category.blogs[i]._id %>/edit" class="neu-convex-box mx-auto blog-display-button blog-display-button-edit normalize-link pressable-button-action">
+						<i class="fas fa-hammer"></i>
+					</a>
+					<% } %>
+					<div class="neu-convex-box ml-auto blog-display-button pressable-button-action">
+						share
+					</div>
+				</div>
+			</div>
+		</div>
+		<% } %>
+	</div>
+
+<!-- Edit Button -->
 <% if(isAdmin) { %>
 	<a href="/blog/category/<%= index %>/edit" class="neu-convex-sbox normalize-link w-100-button pressable-button-action">
 		Edit
