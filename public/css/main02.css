@@ -343,3 +343,10 @@ select:-webkit-autofill:focus {
 share-button:before {
 	background: none !important;
 }
+share-button:hover{
+	color: none !important;
+	background: none !important;
+}
+.sb-social{
+	margin-left: 2.2rem;
+}
