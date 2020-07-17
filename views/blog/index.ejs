@@ -26,13 +26,39 @@
 						<i class="fas fa-hammer"></i>
 					</a>
 					<% } %>
-					<div class="neu-convex-box ml-auto blog-display-button pressable-button-action">
+					<share-button id="share0<%= i %>" class="neu-convex-box ml-auto blog-display-button pressable-button-action share-button-style-01">
 						share
-					</div>
+					</share-button>
 				</div>
 			</div>
 		</div>
 		<% } %>
 	</div>
 
+<!-- Custum Javascript -->
+<script  src="js/share-button.js"></script>
+<script>
+(function(){
+	var shares = [];
+	<% for(var i = (blogs.length - 1); i >= 0; i--) {%>
+		new ShareButton("#share0<%= i %>" ,{
+		url: "https://www.singularityplanet.com/blog/<%= blogs[i]._id %>",
+		networks: {
+			googlePlus: {
+				enabled: false
+			},
+			pinterest: {
+				enabled: false
+			}
+		},
+		ui: {
+			flyout: "top left",
+			icon_font: false,
+			buttonText: "share",
+			button_font: false
+		}
+	});
+	<% } %>
+})();
+</script>
 <%- include("../partials/blogFooter") -%>
