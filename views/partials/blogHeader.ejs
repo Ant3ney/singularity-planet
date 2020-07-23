@@ -40,6 +40,7 @@
 					<span class="neu-flat-sbox main-nav-ele mt-2 mt-md-0 my-2">Hello <%= currentUser.username %></span>
 					<a class="neu-convex-sbox main-nav-ele ml-4 mt-2 mt-md-0 my-2 pressable-button-action" href="/logout">Logout<span class="sr-only">(current)</span></a>
 				<% } %>
+				<share-button id="nav-share" class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 ml-4 pressable-button-action share-button-style-01-nav"></share-button>
 				<% if(isAdmin){ %>
 				<a id="add-new-fix" class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 pressable-button-action" href="/blog/new">Add new<span class="sr-only">(current)</span></a>
 				<% } %>

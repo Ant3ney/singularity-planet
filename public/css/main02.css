@@ -350,3 +350,14 @@ share-button:hover{
 .sb-social{
 	margin-left: 2.2rem;
 }
+.share-button-style-01-nav{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	text-transform: lowercase;
+	z-index: 20;
+}
+@media only screen and (max-width: 500px) {
+	.share-button-style-01-nav{
+		font-size: 0.75rem;
+	}
+}

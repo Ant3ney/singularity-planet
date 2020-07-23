@@ -26,5 +26,24 @@
 			});
 		});
 	</script>	  
+	<script src="/js/share-button.js"></script>
+	<script>
+		new ShareButton("#nav-share",{
+		networks: {
+			googlePlus: {
+				enabled: false
+			},
+			pinterest: {
+				enabled: false
+			}
+		},
+		ui: {
+			flyout: "bottom left",
+			icon_font: true,
+			buttonText: "share",
+			button_font: false
+		}
+	});
+	</script>
   </body>
 </html>
