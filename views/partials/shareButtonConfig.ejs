@@ -1,0 +1,62 @@
+<script  src="/js/share-button.js"></script>
+<script>
+//Share button config for blog index page
+<% if(typeof blogs != 'undefined'){ %>
+(function(){
+	var shares = [];
+	<% for(var i = (blogs.length - 1); i >= 0; i--) {%>
+		new ShareButton("#share0<%= i %>" ,{
+		url: "https://www.singularityplanet.com/blog/<%= blogs[i]._id %>",
+		image: "<%= blogs[i].image %>",
+		networks: {
+			googlePlus: {
+				enabled: false
+			},
+			pinterest: {
+				enabled: false
+			},
+			facebook: {
+				image: 	"<%= blogs[i].image %>"	
+			}
+		},
+		ui: {
+			flyout: "top left",
+			icon_font: true,
+			buttonText: "share",
+			button_font: false
+		}
+	});
+	<% } %>
+})();
+<% } %>
+
+//Share button config for category page
+<% if(typeof category != 'undefined'){ %>
+(function(){
+	var shares = [];
+	<% for(var i = (category.blogs.length - 1); i >= 0; i--) {%>
+		new ShareButton("#share0<%= i %>" ,{
+		url: "https://www.singularityplanet.com/blog/<%= category.blogs[i]._id %>",
+		image: "<%= category.blogs[i].image %>",
+		networks: {
+			googlePlus: {
+				enabled: false
+			},
+			pinterest: {
+				enabled: false
+			},
+			facebook: {
+				image: 	"<%= category.blogs[i].image %>"	
+			}
+		},
+		ui: {
+			flyout: "top left",
+			icon_font: true,
+			buttonText: "share",
+			button_font: false
+		}
+	});
+	<% } %>
+})();	
+<% } %>
+</script>

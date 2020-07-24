@@ -43,34 +43,5 @@
 	</a>
 <% } %>
 
-<!-- Custum Javascript -->
-<script  src="/js/share-button.js"></script>
-<script>
-(function(){
-	var shares = [];
-	<% for(var i = (category.blogs.length - 1); i >= 0; i--) {%>
-		new ShareButton("#share0<%= i %>" ,{
-		url: "https://www.singularityplanet.com/blog/<%= category.blogs[i]._id %>",
-		image: "<%= category.blogs[i].image %>",
-		networks: {
-			googlePlus: {
-				enabled: false
-			},
-			pinterest: {
-				enabled: false
-			},
-			facebook: {
-				image: 	"<%= category.blogs[i].image %>"	
-			}
-		},
-		ui: {
-			flyout: "top left",
-			icon_font: true,
-			buttonText: "share",
-			button_font: false
-		}
-	});
-	<% } %>
-})();
-</script>
+<%- include("../partials/shareButtonConfig") -%>
 <%- include("../partials/blogFooter") -%>
