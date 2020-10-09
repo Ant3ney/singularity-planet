@@ -1,0 +1,41 @@
+<!-- Home page -->
+<%- include("./partials/header") -%>
+	<h1>
+		<!-- Add proper databace suport and dynamics suppoort in future -->
+		<h3 class="col-12 neu-flat-sbox px-3 py-2 mb-0 center-text">Welcome to Singularity Planet!</h3>	
+		<div class="row">
+			<!-- Link element -->
+			<div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
+				<div class="neu-flat-sbox blog-display-container">
+					<div class="neu-flat-sbox blog-display-img-holder">
+						<img src="https://serene-williams-bb8bee.netlify.app/images/Gravyhouse/CGravyHouse.png" class="blog-display-img">
+					</div>
+					<div class="neu-flat-sbox blog-display-title-container">
+						<p class="p-1 mb-0 blog-display-title-text-container make-font-size-1-rem">
+							Code Name Gravy House
+						</p>
+					</div>
+					<div class="neu-pressed-sbox blog-display-preview-container">
+						<p class="p-1 blog-display-preview-text-container">
+							Compeate in a power strugle to become the owner of gravy house
+						</p>
+					</div>
+					<div class="blog-display-buttons-abstract-container">
+						<a href="https://coco-game.netlify.app/" class="normalize-link neu-convex-box mr-auto blog-display-button normalize-link pressable-button-action make-font-size-1-rem">
+							Play
+						</a>
+						<% if(isAdmin){ %>
+						<a href="#" class="neu-convex-box mx-auto blog-display-button blog-display-button-edit normalize-link pressable-button-action">
+							<i class="fas fa-hammer"></i>
+						</a>
+						<% } %>
+						<share-button id="share00" class="neu-convex-box ml-auto blog-display-button pressable-button-action share-button-style-01">
+							share
+						</share-button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</h1>
+<%- include("./partials/staticShareConfig") -%>
+<%- include("./partials/footer") -%>

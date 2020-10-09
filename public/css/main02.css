@@ -180,6 +180,12 @@ body{
 .blog-display-title-text-container{
 	
 }
+.center-text{
+	text-align: center;
+}
+.make-font-size-1-rem{
+	font-size: 1rem;
+}
 .navbar-toggler{
 	outline:none !important;
 }

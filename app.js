@@ -54,7 +54,7 @@ app.use("/blog", blogRouts);
 app.use(indexRouts);
 
 app.get("/", (req, res) =>{
-	res.redirect("/blog");
+	res.render("index");
 });
 
 app.listen((process.env.PORT || 3000), process.env.IP, () => {

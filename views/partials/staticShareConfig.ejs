@@ -1,0 +1,27 @@
+<script  src="/js/share-button.js"></script>
+<script>
+// Rename and refactor to home page share buttons
+(function(){
+	new ShareButton("#share00" ,{
+			url: "https://www.singularityplanet.com",
+			image: "https://serene-williams-bb8bee.netlify.app/images/Gravyhouse/CGravyHouse.png",
+			networks: {
+				googlePlus: {
+					enabled: false
+				},
+				pinterest: {
+					enabled: false
+				},
+				facebook: {
+					image: 	"https://serene-williams-bb8bee.netlify.app/images/Gravyhouse/CGravyHouse.png"	
+				}
+			},
+			ui: {
+				flyout: "top left",
+				icon_font: true,
+				buttonText: "share",
+				button_font: false
+			}	
+		})
+})();
+</script>
