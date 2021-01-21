@@ -15,7 +15,7 @@
 					<img src="<%= category.blogs[i].image %>" class="blog-display-img">
 				</div>
 				<div class="neu-flat-sbox blog-display-title-container">
-					<p class="p-1 mb-0 blog-display-title-text-container">
+					<p class="p-1 mb-0 blog-display-title-text-container <% if(blogs[i].title.length >= 35){ %> make-text-10px <% } %>">
 						<%= category.blogs[i].title %>
 					</p>
 				</div>
