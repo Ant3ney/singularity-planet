@@ -99,6 +99,9 @@ body{
 	box-shadow: inset 5px 5px 10px #bdc4c5, 
             inset -5px -5px 10px #ffffff;
 }
+.navbar{
+	overflow: hidden;
+}
 .nav-categorys{
 	text-align: center;
 	height: 4rem;
