@@ -58,5 +58,5 @@ app.get("/", (req, res) =>{
 });
 
 app.listen((process.env.PORT || 3000), process.env.IP, () => {
-	console.log("Working");
+	console.log(`Server has started on port: ${(process.env.PORT || 3000)}`);
 });
