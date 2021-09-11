@@ -48,4 +48,8 @@ router.get('/businesspolicy/pricing', (req, res) => {
 	res.render('SingularityPolicy/price/index');
 });
 
+router.get('/privacy', (req, res) => {
+	res.render('SingularityPolicy/privacy');
+});
+
 module.exports = router;
