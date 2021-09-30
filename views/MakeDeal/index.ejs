@@ -1,0 +1,88 @@
+<%-include("../partials/header") -%>
+
+<div class="make-deal">
+   <div class="row px-3 mt-3">
+      <h1 class="col-12 neu-flat-sbox m-0 text-center px-5 py-3">
+         Lets make a deal
+      </h1>
+   </div>
+   <div class="row pb-3 pr-3 links-container">
+      <div class="col-6 col-md-3 d-flex">
+         <a
+            href="/businesspolicy/pricing"
+            class="neu-flat-sbox px-5 py-3 ml-3 link text-center link"
+            >Pricing</a
+         >
+      </div>
+      <div class="col-6 col-md-3 d-flex">
+         <a
+            href="https://www.linkedin.com/in/anthony-cavuoti-developer/"
+            class="neu-flat-sbox px-5 py-3 ml-3 link text-center link"
+            >Linkedin</a
+         >
+      </div>
+      <div class="col-6 col-md-3 d-flex">
+         <a
+            href="https://www.upwork.com/freelancers/~01f89baf7c07759e9d/"
+            class="neu-flat-sbox px-5 py-3 ml-3 link text-center link"
+            >Upwork</a
+         >
+      </div>
+      <div class="col-6 col-md-3 d-flex">
+         <a
+            href="https://www.youtube.com/channel/UCJciBmloWgKteMlftWHN0QA"
+            class="neu-flat-sbox px-5 py-3 ml-3 link text-center link"
+            >Youtube</a
+         >
+      </div>
+   </div>
+   <div class="row px-3 mt-4">
+      <p class="col-12 neu-flat-sbox m-0 text-center px-5 py-3">
+         How do you want your site made? Are you trying to track reported whale
+         sightings or maybe integrate payment solutions? This is your
+         opportunity to describe the issue your site needs to remedy.
+      </p>
+   </div>
+   <form action="/makedeal" method="POST">
+      <div class="row px-3 mt-4">
+         <div class="row px-3">
+            <p class="col-12 neu-flat-sbox m-0 px-5 py-3 w-auto">Email</p>
+         </div>
+      </div>
+      <div class="row px-3 mt-4">
+         <input
+            name="email"
+            class="col-12 neu-pressed-sbox m-0 px-5 py-3 w-auto"
+         />
+      </div>
+      <div class="row px-3 mt-4">
+         <div class="row px-3">
+            <p class="col-12 neu-flat-sbox m-0 px-5 py-3 w-auto">Message</p>
+         </div>
+      </div>
+      <div class="row px-3 mt-4">
+         <textarea
+            name="message"
+            class="col-12 neu-pressed-sbox m-0 px-5 py-3 w-auto"
+         ></textarea>
+      </div>
+      <div class="row px-3 mt-4">
+         <div class="row px-3">
+            <button
+               class="
+                  col-12
+                  pressable-button-action
+                  neu-convex-sbox
+                  m-0
+                  px-5
+                  py-3
+                  w-auto
+               "
+            >
+               Send message
+            </button>
+         </div>
+      </div>
+   </form>
+   <%-include("../partials/footer") -%>
+</div>

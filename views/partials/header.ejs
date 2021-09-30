@@ -1,58 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	  
-	  <!-- Font-Awsome -->
-	  <script src="https://kit.fontawesome.com/0d4692f1c3.js" crossorigin="anonymous"></script>
-	
-	 <!-- Cusstum Css -->
-	 <link rel="stylesheet" type="text/css" href="/css/main02.css">
-	 <link rel="stylesheet" type="text/css" href="/css/share-button.css">
-	  
-    <title>Singularity Blogs</title>
-  </head>
-  	<body>
-		<!-- Nav area -->
-		<nav class="navbar navbar-expand-md navbar-light pb-0">
-		  <a class="neu-convex-sbox main-nav-ele pressable-button-action" href="/">Singularity</a>
-		  <button class="neu-convex-sbox navbar-toggler pressable-button-action" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: 0;">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
+      <!-- Bootstrap CSS -->
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+         crossorigin="anonymous"
+      />
 
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-			  <li class="nav-item">
-				<a class="neu-convex-sbox main-nav-ele ml-sm-4 d-md-inline d-none pressable-button-action" href="/">Home <span class="sr-only">(current)</span></a>
-			  </li>
-			  <li class="nav-item">
-				<a class="neu-convex-sbox main-nav-ele ml-sm-4 d-md-inline d-none pressable-button-action" href="/blog">Blogs <span class="sr-only">(current)</span></a>
-			  </li>
-			</ul>
-			<form class="form-inline mt-2 mt-lg-0">
-				<a class="neu-convex-sbox main-nav-ele ml-sm-4 d-inline d-md-none mr-4 my-2 pressable-button-action" href="/">Home <span class="sr-only">(current)</span></a>
-				<a class="neu-convex-sbox main-nav-ele ml-sm-4 d-inline d-md-none mr-4 my-2 pressable-button-action" href="/blog">Blogs <span class="sr-only">(current)</span></a>
-				<a class="neu-convex-sbox main-nav-ele mr-4 mt-2 mt-md-0 my-2 pressable-button-action" href="/businesspolicy/pricing">Pricing<span class="sr-only">(current)</span></a>
-				<% if(!currentUser) {%>
-			  <a class="neu-convex-sbox main-nav-ele mr-4 mt-2 mt-md-0 my-2 pressable-button-action" href="/register">Sign up<span class="sr-only">(current)</span></a>
-			  <a class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 pressable-button-action" href="/login">Login<span class="sr-only">(current)</span></a>
-				<%} else { %>
-					<span class="neu-flat-sbox main-nav-ele mt-2 mt-md-0 my-2">Hello <%= currentUser.username %></span>
-					<a class="neu-convex-sbox main-nav-ele ml-4 mt-2 mt-md-0 my-2 pressable-button-action" href="/logout">Logout<span class="sr-only">(current)</span></a>
-				<% } %>
+      <!-- Font-Awsome -->
+      <script
+         src="https://kit.fontawesome.com/0d4692f1c3.js"
+         crossorigin="anonymous"
+      ></script>
 
-				<share-button id="nav-share" class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 ml-4 pressable-button-action share-button-style-01-nav"></share-button>
-				<% if(isAdmin){ %>
-				<a id="add-new-fix" class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 pressable-button-action" href="/blog/new">Add new<span class="sr-only">(current)</span></a>
-				<% } %>
-			</form>
-		  </div>
-		</nav>
-		
-		<!-- Body container -->
-		<div class="neu-pressed-box p-3 m-2">
+      <!-- Cusstum Css -->
+      <link rel="stylesheet" type="text/css" href="/css/main02.css" />
+      <link rel="stylesheet" type="text/css" href="/css/share-button.css" />
+
+      <title>Singularity Blogs</title>
+   </head>
+   <body>
+      <!-- Nav area -->
+      <nav class="navbar navbar-expand-lg navbar-light pb-0">
+         <a
+            class="neu-convex-sbox main-nav-ele pressable-button-action"
+            href="/"
+            >Singularity</a
+         >
+         <button
+            class="neu-convex-sbox navbar-toggler pressable-button-action"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="border: 0"
+         >
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a
+                     class="
+                        neu-convex-sbox
+                        main-nav-ele
+                        ml-sm-4
+                        d-md-inline d-none
+                        pressable-button-action
+                     "
+                     href="/"
+                     >Home <span class="sr-only">(current)</span></a
+                  >
+               </li>
+               <li class="nav-item">
+                  <a
+                     class="
+                        neu-convex-sbox
+                        main-nav-ele
+                        ml-sm-4
+                        d-md-inline d-none
+                        pressable-button-action
+                     "
+                     href="/blog"
+                     >Blogs <span class="sr-only">(current)</span></a
+                  >
+               </li>
+            </ul>
+            <form class="form-inline mt-2 mt-lg-0">
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     ml-sm-4
+                     d-inline d-md-none
+                     mr-4
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/"
+                  >Home <span class="sr-only">(current)</span></a
+               >
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     ml-sm-4
+                     d-inline d-md-none
+                     mr-4
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/blog"
+                  >Blogs <span class="sr-only">(current)</span></a
+               >
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     mr-4
+                     mt-2 mt-md-0
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/makedeal"
+                  >Contact Me<span class="sr-only">(current)</span></a
+               >
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     mr-4
+                     mt-2 mt-md-0
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/businesspolicy/pricing"
+                  >Pricing<span class="sr-only">(current)</span></a
+               >
+               <% if(!currentUser) {%>
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     mr-4
+                     mt-2 mt-md-0
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/register"
+                  >Sign up<span class="sr-only">(current)</span></a
+               >
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     mt-2 mt-md-0
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/login"
+                  >Login<span class="sr-only">(current)</span></a
+               >
+               <%} else { %>
+               <span class="neu-flat-sbox main-nav-ele mt-2 mt-md-0 my-2"
+                  >Hello <%= currentUser.username %></span
+               >
+               <a
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     ml-4
+                     mt-2 mt-md-0
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/logout"
+                  >Logout<span class="sr-only">(current)</span></a
+               >
+               <% } %>
+
+               <share-button
+                  id="nav-share"
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     mt-2 mt-md-0
+                     my-2
+                     ml-4
+                     pressable-button-action
+                     share-button-style-01-nav
+                  "
+               ></share-button>
+               <% if(isAdmin){ %>
+               <a
+                  id="add-new-fix"
+                  class="
+                     neu-convex-sbox
+                     main-nav-ele
+                     mt-2 mt-md-0
+                     my-2
+                     pressable-button-action
+                  "
+                  href="/blog/new"
+                  >Add new<span class="sr-only">(current)</span></a
+               >
+               <% } %>
+            </form>
+         </div>
+      </nav>
+
+      <!-- Body container -->
+      <div class="neu-pressed-box p-3 m-2">
+   </body>
+</html>

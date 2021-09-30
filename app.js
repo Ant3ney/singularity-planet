@@ -1,38 +1,48 @@
-var express = require("express");
+var express = require('express');
 var app = express();
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var passport = require("passport");
-var LocalStrategy = require("passport-local");
-var User = require("./models/User");
-var blogRouts = require("./routs/blogs");
-var indexRouts = require("./routs/index");
-var middleware = require("./middleware/index.js");
-var Category = require("./models/Category");
-var categoryRouts = require("./routs/categorys");
-var commentRouts = require("./routs/comments");
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var passport = require('passport');
+var LocalStrategy = require('passport-local');
+var User = require('./models/User');
+var blogRouts = require('./routs/blogs');
+var indexRouts = require('./routs/index');
+var middleware = require('./middleware/index.js');
+var Category = require('./models/Category');
+var categoryRouts = require('./routs/categorys');
+var commentRouts = require('./routs/comments');
 
-mongoose.connect("mongodb+srv://Anthony2361:7*h!WUUebHAu3vz@cluster0-j2fws.mongodb.net/Singularity?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
-	console.log("mongoose server is up");
-}).catch(err => {
-	console.log("Something went wrong in mongodb")
-	console.log(err.message);
-});
+require('dotenv').config();
+
+mongoose
+   .connect(
+      'mongodb+srv://Anthony2361:7*h!WUUebHAu3vz@cluster0-j2fws.mongodb.net/Singularity?retryWrites=true&w=majority',
+      { useUnifiedTopology: true, useNewUrlParser: true }
+   )
+   .then(() => {
+      console.log('mongoose server is up');
+   })
+   .catch(err => {
+      console.log('Something went wrong in mongodb');
+      console.log(err.message);
+   });
 
 //setting and getting info
-app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + "/public"));
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 console.log(__dirname);
-app.use(methodOverride("_method"));
+app.use(methodOverride('_method'));
 
 //Passport configuration
-app.use(require("express-session")({
-	secret: "The singularity blog value",
-	resave: false,
-	saveUninitialized: false
-}));
+app.use(
+   require('express-session')({
+      secret: 'The singularity blog value',
+      resave: false,
+      saveUninitialized: false,
+   })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -42,21 +52,21 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-	res.locals.currentUser = req.user;
-	res.locals.isAdmin = middleware.isAdminBool(req);
-	next();
-})
-
-//Route Configuration
-app.use("/blog/category", categoryRouts);
-app.use("/blog/:blogId/comment", commentRouts);
-app.use("/blog", blogRouts);
-app.use(indexRouts);
-
-app.get("/", (req, res) =>{
-	res.render("index");
+   res.locals.currentUser = req.user;
+   res.locals.isAdmin = middleware.isAdminBool(req);
+   next();
 });
 
-app.listen((process.env.PORT || 3002), process.env.IP, () => {
-	console.log(`Server has started on port: ${(process.env.PORT || 3000)}`);
+//Route Configuration
+app.use('/blog/category', categoryRouts);
+app.use('/blog/:blogId/comment', commentRouts);
+app.use('/blog', blogRouts);
+app.use(indexRouts);
+
+app.get('/', (req, res) => {
+   res.render('index');
+});
+
+app.listen(process.env.PORT || 3002, process.env.IP, () => {
+   console.log(`Server has started on port: ${process.env.PORT || 3002}`);
 });

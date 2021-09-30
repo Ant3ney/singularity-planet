@@ -1,72 +1,180 @@
 <!-- Home page -->
 <%- include("./partials/header") -%>
-	<h1>
-		<!-- Add proper databace suport and dynamics suppoort in future -->
-		<h3 class="col-12 neu-flat-sbox px-3 py-2 mb-0 center-text">Welcome to Singularity Planet!</h3>	
-		<div class="row">
-			<!-- Link element -->
-			<div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
-				<div class="neu-flat-sbox blog-display-container">
-					<div class="neu-flat-sbox blog-display-img-holder">
-						<img src="https://serene-williams-bb8bee.netlify.app/images/247Sales/247SaleThumbnail.png" class="blog-display-img">
-					</div>
-					<div class="neu-flat-sbox blog-display-title-container">
-						<p class="p-1 mb-0 blog-display-title-text-container make-font-size-1-rem">
-							24/7 Sale
-						</p>
-					</div>
-					<div class="neu-pressed-sbox blog-display-preview-container">
-						<p class="p-1 blog-display-preview-text-container">
-							Browse hundreds of games with huge sales.
-						</p>
-					</div>
-					<div class="blog-display-buttons-abstract-container">
-						<a href="https://247-sale.netlify.app/" class="normalize-link neu-convex-box mr-auto blog-display-button normalize-link pressable-button-action make-font-size-1-rem">
-							Browse
-						</a>
-						<% if(isAdmin){ %>
-						<a href="#" class="neu-convex-box mx-auto blog-display-button blog-display-button-edit normalize-link pressable-button-action">
-							<i class="fas fa-hammer"></i>
-						</a>
-						<% } %>
-						<share-button id="share00" class="neu-convex-box ml-auto blog-display-button pressable-button-action share-button-style-01">
-							share
-						</share-button>
-					</div>
-				</div>
-			</div>
-			<!-- Link element -->
-			<div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
-				<div class="neu-flat-sbox blog-display-container">
-					<div class="neu-flat-sbox blog-display-img-holder">
-						<img src="https://serene-williams-bb8bee.netlify.app/images/Gravyhouse/CGravyHouse.png" class="blog-display-img">
-					</div>
-					<div class="neu-flat-sbox blog-display-title-container">
-						<p class="p-1 mb-0 blog-display-title-text-container make-font-size-1-rem">
-							Gravy House (early alpha)
-						</p>
-					</div>
-					<div class="neu-pressed-sbox blog-display-preview-container">
-						<p class="p-1 blog-display-preview-text-container">
-							Compete in a power strugle to become the owner of Gravy House!
-						</p>
-					</div>
-					<div class="blog-display-buttons-abstract-container">
-						<a href="https://coco-game.netlify.app/" class="normalize-link neu-convex-box mr-auto blog-display-button normalize-link pressable-button-action make-font-size-1-rem">
-							Play
-						</a>
-						<% if(isAdmin){ %>
-						<a href="#" class="neu-convex-box mx-auto blog-display-button blog-display-button-edit normalize-link pressable-button-action">
-							<i class="fas fa-hammer"></i>
-						</a>
-						<% } %>
-						<share-button id="share00" class="neu-convex-box ml-auto blog-display-button pressable-button-action share-button-style-01">
-							share
-						</share-button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</h1>
-<%- include("./partials/staticShareConfig") -%>
-<%- include("./partials/footer") -%>
+<h1>
+   <!-- Add proper databace suport and dynamics suppoort in future -->
+   <!-- Landing outer Element -->
+   <div class="landing">
+      <div class="side left-side">
+         <div class="content-centerer">
+            <h3 class="neu-flat-sbox px-3 py-2 title">
+               We make building your site fun and easy!
+            </h3>
+            <p class="neu-flat-sbox px-3 py-2 text">
+               Do you need a website with guaranteed great quality? Are there
+               specific requirements you need in your site?
+            </p>
+            <a
+               class="
+                  neu-convex-sbox
+                  px-3
+                  py-2
+                  text
+                  pressable-button-action
+                  action-button
+               "
+               href="/makeDeal"
+            >
+               Lets Talk
+            </a>
+         </div>
+      </div>
+
+      <div class="side right-side">
+         <img src="/images/components/LandingPage.png" />
+      </div>
+   </div>
+   <div class="row">
+      <!-- Link Outer Element -->
+      <div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
+         <div class="neu-flat-sbox blog-display-container">
+            <div class="neu-flat-sbox blog-display-img-holder">
+               <img
+                  src="https://serene-williams-bb8bee.netlify.app/images/247Sales/247SaleThumbnail.png"
+                  class="blog-display-img"
+               />
+            </div>
+            <div class="neu-flat-sbox blog-display-title-container">
+               <p
+                  class="
+                     p-1
+                     mb-0
+                     blog-display-title-text-container
+                     make-font-size-1-rem
+                  "
+               >
+                  24/7 Sale
+               </p>
+            </div>
+            <div class="neu-pressed-sbox blog-display-preview-container">
+               <p class="p-1 blog-display-preview-text-container">
+                  Browse hundreds of games with huge sales.
+               </p>
+            </div>
+            <div class="blog-display-buttons-abstract-container">
+               <a
+                  href="https://247-sale.netlify.app/"
+                  class="
+                     normalize-link
+                     neu-convex-box
+                     mr-auto
+                     blog-display-button
+                     normalize-link
+                     pressable-button-action
+                     make-font-size-1-rem
+                  "
+               >
+                  Browse
+               </a>
+               <% if(isAdmin){ %>
+               <a
+                  href="#"
+                  class="
+                     neu-convex-box
+                     mx-auto
+                     blog-display-button blog-display-button-edit
+                     normalize-link
+                     pressable-button-action
+                  "
+               >
+                  <i class="fas fa-hammer"></i>
+               </a>
+               <% } %>
+               <share-button
+                  id="share00"
+                  class="
+                     neu-convex-box
+                     ml-auto
+                     blog-display-button
+                     pressable-button-action
+                     share-button-style-01
+                  "
+               >
+                  share
+               </share-button>
+            </div>
+         </div>
+      </div>
+      <!-- Link Outer Element -->
+      <div class="col-sm-6 col-lg-4 col-xl-3 blog-display-container-abstract">
+         <div class="neu-flat-sbox blog-display-container">
+            <div class="neu-flat-sbox blog-display-img-holder">
+               <img
+                  src="https://serene-williams-bb8bee.netlify.app/images/Gravyhouse/CGravyHouse.png"
+                  class="blog-display-img"
+               />
+            </div>
+            <div class="neu-flat-sbox blog-display-title-container">
+               <p
+                  class="
+                     p-1
+                     mb-0
+                     blog-display-title-text-container
+                     make-font-size-1-rem
+                  "
+               >
+                  Gravy House (early alpha)
+               </p>
+            </div>
+            <div class="neu-pressed-sbox blog-display-preview-container">
+               <p class="p-1 blog-display-preview-text-container">
+                  Compete in a power strugle to become the owner of Gravy House!
+               </p>
+            </div>
+            <div class="blog-display-buttons-abstract-container">
+               <a
+                  href="https://coco-game.netlify.app/"
+                  class="
+                     normalize-link
+                     neu-convex-box
+                     mr-auto
+                     blog-display-button
+                     normalize-link
+                     pressable-button-action
+                     make-font-size-1-rem
+                  "
+               >
+                  Play
+               </a>
+               <% if(isAdmin){ %>
+               <a
+                  href="#"
+                  class="
+                     neu-convex-box
+                     mx-auto
+                     blog-display-button blog-display-button-edit
+                     normalize-link
+                     pressable-button-action
+                  "
+               >
+                  <i class="fas fa-hammer"></i>
+               </a>
+               <% } %>
+               <share-button
+                  id="share00"
+                  class="
+                     neu-convex-box
+                     ml-auto
+                     blog-display-button
+                     pressable-button-action
+                     share-button-style-01
+                  "
+               >
+                  share
+               </share-button>
+            </div>
+         </div>
+      </div>
+   </div>
+</h1>
+<%- include("./partials/staticShareConfig") -%> <%- include("./partials/footer")
+-%>

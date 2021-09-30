@@ -369,6 +369,143 @@ share-button:hover{
 	text-transform: lowercase;
 	z-index: 20;
 }
+
+.make-deal{
+
+}
+
+.make-deal .links-container{
+	display: flex;
+}
+
+.make-deal .link{
+	width: 100%;
+	height: auto;
+	padding-top: 3rem !important;
+	padding-bottom: 3rem !important;
+	margin-top: 2rem;
+	color: black;
+}
+
+.make-deal .link:hover{
+	text-decoration: none;
+	color: black;
+}
+
+.make-deal input{
+	outline: none !important;
+	border: none !important;
+}
+
+.make-deal textarea{
+	outline: none !important;
+	border: none !important;
+}
+
+.make-deal button{
+	outline: none !important;
+	border: none !important;
+}
+
+.make-deal input:focus{
+	outline: none !important;
+	border: none !important;
+}
+
+.flex-column{
+	flex-direction: column;
+}
+
+.landing{
+	width: 100%;
+	height: 70vh;
+	padding-bottom: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.landing .content-centerer{
+	margin: auto 0rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.landing .side{
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+	width: 50%;
+	height: auto;
+}
+
+.landing .title{
+	text-align: center;
+}
+
+.landing .left-side{
+	padding-left: 3rem;
+	padding-right: 1.5rem;
+}
+.landing .right-side{
+	padding-right: 3rem;
+	padding-left: 1.5rem;
+}
+
+.landing img{
+	margin: auto;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	max-height: 100%;
+}
+.landing .text{
+	font-size: 1rem;
+	margin-top: 1rem;
+	text-align: center;
+}
+.landing .action-button{
+	width: auto;
+	margin: 1rem auto 0rem auto;
+}
+
+.landing .action-button:hover{
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.landing{
+		flex-direction: column;
+		flex-wrap: nowrap;
+		height: auto;
+	}
+	.landing img{
+		width: 100%;
+		height: auto;
+		max-height: 50%;
+	}
+
+	.landing .title{
+		
+		font-size: 1.5rem;
+	}
+
+	.landing .side{
+		height: min-content;
+		width: 100%;
+		padding: 2rem 2rem 0rem 2rem;
+	}
+
+	.landing .left-side{
+
+	}
+
+	.landing .content-centerer{
+		margin: 0rem;
+	}
+
+	
+
+}
 @media only screen and (max-width: 500px) {
 	.share-button-style-01-nav{
 		font-size: 0.75rem;
