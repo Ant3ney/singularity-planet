@@ -16,10 +16,10 @@ var commentRouts = require('./routs/comments');
 require('dotenv').config();
 
 mongoose
-   .connect(
-      'mongodb+srv://Anthony2361:7*h!WUUebHAu3vz@cluster0-j2fws.mongodb.net/Singularity?retryWrites=true&w=majority',
-      { useUnifiedTopology: true, useNewUrlParser: true }
-   )
+   .connect(process.env.DATABASEURL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+   })
    .then(() => {
       console.log('mongoose server is up');
    })

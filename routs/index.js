@@ -83,11 +83,19 @@ router.post('/makedeal', (req, res) => {
       })
       .then(status => {
          console.log('status data below');
-         console.log(status);
+         res.redirect('/successfullysentemail');
       })
       .catch(err => {
          console.error(err);
+         res.redirect('/failedtosendemail');
       });
+});
+
+router.get('/successfullysentemail', (req, res) => {
+   res.render('singlePurpose/SuccessfullySentEmail');
+});
+router.get('/failedtosendemail', (req, res) => {
+   res.render('singlePurpose/failedToSendEmail');
 });
 
 module.exports = router;
