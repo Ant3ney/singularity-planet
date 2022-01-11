@@ -27,13 +27,13 @@ router.post('/register', (req, res) => {
 router.get('/login', (req, res) => {
    res.render('login');
 });
-router.post(
-   '/login',
+router.post('/login', (req, res, next) => {
+   console.log('posting to here');
    passport.authenticate('local', {
       successRedirect: '/blog',
       falureRedirect: '/login',
-   })
-);
+   })(req, res, next);
+});
 
 //logout route
 router.get('/logout', (req, res) => {

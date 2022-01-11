@@ -58,9 +58,10 @@ app.use((req, res, next) => {
 });
 
 //Route Configuration
+app.use(indexRouts);
+app.use(blogRouts);
 app.use('/category', categoryRouts);
 app.use('/:blogId/comment', commentRouts);
-app.use(blogRouts);
 
 app.listen(process.env.PORT || 3002, process.env.IP, () => {
    console.log(`Server has started on port: ${process.env.PORT || 3002}`);

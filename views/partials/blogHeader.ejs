@@ -53,13 +53,7 @@
             <ul class="navbar-nav mr-auto">
                <li class="nav-item">
                   <a
-                     class="
-                        neu-convex-sbox
-                        main-nav-ele
-                        ml-sm-4
-                        d-md-inline d-none
-                        pressable-button-action
-                     "
+                     class="neu-convex-sbox main-nav-ele ml-sm-4 d-md-inline d-none pressable-button-action"
                      href="/"
                      >Home <span class="sr-only">(current)</span></a
                   >
@@ -67,32 +61,17 @@
             </ul>
             <form class="form-inline mt-2 mt-lg-0">
                <a
-                  class="
-                     neu-convex-sbox
-                     main-nav-ele
-                     ml-sm-4
-                     d-inline d-md-none
-                     mr-4
-                     my-2
-                     pressable-button-action
-                  "
+                  class="neu-convex-sbox main-nav-ele ml-sm-4 d-inline d-md-none mr-4 my-2 pressable-button-action"
                   href="/"
                   >Home <span class="sr-only">(current)</span></a
                >
                <% if(!currentUser) {%>
-               <a
-                  class="
-                     neu-convex-sbox
-                     main-nav-ele
-                     mr-4
-                     mt-2 mt-md-0
-                     my-2
-                     pressable-button-action
-                  "
+               <!-- <a
+                  class="neu-convex-sbox main-nav-ele mr-4 mt-2 mt-md-0 my-2 pressable-button-action"
                   href="/register"
                   >Sign up<span class="sr-only">(current)</span></a
-               >
-               <a
+               > -->
+               <!-- <a
                   class="
                      neu-convex-sbox
                      main-nav-ele
@@ -102,46 +81,25 @@
                   "
                   href="/login"
                   >Login<span class="sr-only">(current)</span></a
-               >
+               > -->
                <%} else { %>
                <span class="neu-flat-sbox main-nav-ele mt-2 mt-md-0 my-2"
                   >Hello <%= currentUser.username %></span
                >
                <a
-                  class="
-                     neu-convex-sbox
-                     main-nav-ele
-                     ml-4
-                     mt-2 mt-md-0
-                     my-2
-                     pressable-button-action
-                  "
+                  class="neu-convex-sbox main-nav-ele ml-4 mt-2 mt-md-0 my-2 pressable-button-action"
                   href="/logout"
                   >Logout<span class="sr-only">(current)</span></a
                >
                <% } %>
                <share-button
                   id="nav-share"
-                  class="
-                     neu-convex-sbox
-                     main-nav-ele
-                     mt-2 mt-md-0
-                     my-2
-                     ml-4
-                     pressable-button-action
-                     share-button-style-01-nav
-                  "
+                  class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 ml-4 pressable-button-action share-button-style-01-nav"
                ></share-button>
                <% if(isAdmin){ %>
                <a
                   id="add-new-fix"
-                  class="
-                     neu-convex-sbox
-                     main-nav-ele
-                     mt-2 mt-md-0
-                     my-2
-                     pressable-button-action
-                  "
+                  class="neu-convex-sbox main-nav-ele mt-2 mt-md-0 my-2 pressable-button-action"
                   href="/blog/new"
                   >Add new<span class="sr-only">(current)</span></a
                >
@@ -156,11 +114,7 @@
             <div class="col-3">
                <a class="normalize-link" href="/blog/category/1">
                   <div
-                     class="
-                        neu-convex-sbox
-                        nav-categorys
-                        pressable-button-action
-                     "
+                     class="neu-convex-sbox nav-categorys pressable-button-action"
                   >
                      Featured
                   </div>
@@ -169,11 +123,7 @@
             <div class="col-3">
                <a class="normalize-link" href="/blog/category/2">
                   <div
-                     class="
-                        neu-convex-sbox
-                        nav-categorys
-                        pressable-button-action
-                     "
+                     class="neu-convex-sbox nav-categorys pressable-button-action"
                   >
                      Music
                   </div>
@@ -182,11 +132,7 @@
             <div class="col-3">
                <a class="normalize-link" href="/blog/category/3">
                   <div
-                     class="
-                        neu-convex-sbox
-                        nav-categorys
-                        pressable-button-action
-                     "
+                     class="neu-convex-sbox nav-categorys pressable-button-action"
                   >
                      Reviews
                   </div>
@@ -195,11 +141,7 @@
             <div class="col-3">
                <a class="normalize-link" href="/blog/category/4">
                   <div
-                     class="
-                        neu-convex-sbox
-                        nav-categorys
-                        pressable-button-action
-                     "
+                     class="neu-convex-sbox nav-categorys pressable-button-action"
                   >
                      General
                   </div>
